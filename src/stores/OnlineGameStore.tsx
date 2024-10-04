@@ -160,6 +160,14 @@ class OnlineGameStore {
                 this.oppWord = this.oppNextWord;
             });
         });
+
+        return () => {
+            socket.off('2players');
+            socket.off('playerData');
+            socket.off('opponentGuess');
+            socket.off('opponentAgainSelection');
+            socket.off('playAgain');
+        }
     }
 
     submitGuess() {

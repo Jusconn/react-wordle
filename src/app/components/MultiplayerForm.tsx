@@ -41,7 +41,7 @@ export default function MultiplayerForm({ router, setShowForm }: { router:AppRou
         const newErrors: string[] = [];
         const form = e.target as HTMLFormElement;
         const username = form.username.value;
-        const secretWord = form.secretWord.value;
+        const secretWord = form.secretWord.value.toLowerCase();
         let roomCode = form.roomCode?.value ?? Math.random().toString(36).substring(2, 8);
 
         if(!words.includes(secretWord)) {newErrors.push('Secret word must be a valid 5 letter word');}
@@ -50,7 +50,6 @@ export default function MultiplayerForm({ router, setShowForm }: { router:AppRou
         if(roomCode.length !== 6) {newErrors.push('Room code must be 6 characters long');}
 
         setError(newErrors);
-
         if (newErrors.length > 0) {
             return;
         }
@@ -89,20 +88,20 @@ export default function MultiplayerForm({ router, setShowForm }: { router:AppRou
                         <label htmlFor="username" className="mr-2">
                             Your Name
                         </label>
-                        <input type="text" name="username" id="username" className="black-text rounded-md" style={{ paddingLeft: '5px' }} />
+                        <input type="text" name="username" id="username" className="black-text rounded-md" style={{ paddingLeft: '5px', color:'black' }} />
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="secretWord" className="mr-2">
                             Secret Word
                         </label>
-                        <input type="text" name="secretWord" id="secretWord" className="black-text rounded-md" style={{ paddingLeft: '5px' }} />
+                        <input type="text" name="secretWord" id="secretWord" className="black-text rounded-md" style={{ paddingLeft: '5px', color:'black' }} />
                     </div>
                     {page === 1 && (
                         <div className="flex flex-col mb-4">
                             <label htmlFor="roomCode" className="mr-2">
                                 Room Code
                             </label>
-                            <input type="text" name="roomCode" id="roomCode" className="black-text rounded-md" style={{ paddingLeft: '5px' }} />
+                            <input type="text" name="roomCode" id="roomCode" className="black-text rounded-md" style={{ paddingLeft: '5px', color:'black' }} />
                         </div>
                     )}
                     <button type="submit" className="bg-gray-500 hover:red-300" style={{ alignSelf: 'center' }}>
