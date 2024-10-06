@@ -4,4 +4,5 @@ This application is a Wordle clone that has solo and multiplayer modes. It was b
 
 ## Play
 
-This app can be played at the following link
+This app can be played at the following link:
+https://jusconswordle.up.railway.app/
