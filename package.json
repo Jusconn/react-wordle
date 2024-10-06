@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon src/server/server.js",
-    "build": "CI=false next build",
+    "build": "next build",
     "start": "NODE_ENV=production node src/server/server.js",
     "lint": "next lint"
   },

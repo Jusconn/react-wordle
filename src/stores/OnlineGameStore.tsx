@@ -201,4 +201,5 @@ class OnlineGameStore {
     }
 }
 
-export default new OnlineGameStore();
+const onlineGameStore = new OnlineGameStore();
+export default onlineGameStore;

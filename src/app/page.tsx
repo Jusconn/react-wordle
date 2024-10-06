@@ -19,7 +19,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center h-screen w-screen">
             <Stack sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} direction="column" spacing={2}>
-                <h1 className="text-6xl font-bold uppercase">Juscon's Wordle Clone</h1>
+                <h1 className="text-6xl font-bold uppercase">{"Juscon's Wordle Clone"}</h1>
                 <Stack direction="row" spacing={2}>
                     {!showForm ? (
                         <Button>

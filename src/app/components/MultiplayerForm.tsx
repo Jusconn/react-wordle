@@ -33,7 +33,7 @@ export default function MultiplayerForm({ router, setShowForm }: { router:AppRou
             socket.off('roomJoined');
             socket.off('roomError');
         };
-    }, [socket, router]);
+    }, [router]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -43,6 +43,7 @@ export default function MultiplayerForm({ router, setShowForm }: { router:AppRou
         const username = form.username.value;
         const secretWord = form.secretWord.value.toLowerCase();
         let roomCode = form.roomCode?.value ?? Math.random().toString(36).substring(2, 8);
+        roomCode = roomCode.toUpperCase();
 
         if(!words.includes(secretWord)) {newErrors.push('Secret word must be a valid 5 letter word');}
         if(username === '') {newErrors.push('Username cannot be empty');}
