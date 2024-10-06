@@ -2,7 +2,6 @@ const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const next = require('next');
-const { user } = require('firebase-functions/v1/auth');
 
 const dev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev });
