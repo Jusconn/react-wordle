@@ -113,5 +113,6 @@ nextApp.prepare().then(() => {
 
   httpServer.listen(PORT,'0.0.0.0', (err) => {
     if (err) throw err;
+    console.log(`server listening on port ${PORT}`);
   });
 });
