@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wordle Multiplayer",
+  title: "Juscon's Wordle",
   description: "Multiplayer Wordle Game developed by Jusconn",
 };
 
