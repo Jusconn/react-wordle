@@ -12,7 +12,6 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || '0.0.0.0';
 
 const activeSockets = {};
 
@@ -112,7 +111,7 @@ nextApp.prepare().then(() => {
     return handle(req, res);
   });
 
-  httpServer.listen(PORT,HOST, (err) => {
+  httpServer.listen(PORT,'0.0.0.0', (err) => {
     if (err) throw err;
   });
 });
