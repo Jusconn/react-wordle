@@ -15,7 +15,7 @@ class GameStore {
     }
 
     get lost() {
-        return this.currGuess === 6;
+        return this.currGuess === 6 && !this.win;
     }
     get allGuesses() {
         return this.guesses.slice(0, this.currGuess).join('').split('')
